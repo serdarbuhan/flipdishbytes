@@ -15,7 +15,8 @@ struct Menu: Decodable {
     }
 }
 
-struct MenuSection: Decodable {
+struct MenuSection: Decodable, Identifiable {
+    let id: Int
     let name: String
     let description: String?
     let displayOrder: Int
@@ -23,6 +24,7 @@ struct MenuSection: Decodable {
     let menuItems: [MenuItem]
 
     enum CodingKeys: String, CodingKey {
+        case id = "MenuSectionId"
         case name = "Name"
         case description = "Description"
         case displayOrder = "DisplayOrder"
@@ -31,12 +33,14 @@ struct MenuSection: Decodable {
     }
 }
 
-struct MenuItem: Decodable {
+struct MenuItem: Decodable, Identifiable {
+    let id: Int
     let name: String
     let description: String?
     let imageUrl: String?
 
     enum CodingKeys: String, CodingKey {
+        case id = "MenuItemId"
         case name = "Name"
         case description = "Description"
         case imageUrl = "ImageUrl"
