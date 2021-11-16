@@ -17,12 +17,34 @@ struct ContentView: View {
                 ForEach(menu.menuSections) { section in
                     Section(header: Text(section.name)) {
                         ForEach(section.menuItems) { menuItem in
-                            Text(menuItem.name)
+                            MenuItemRow(item: menuItem)
                         }
                     }
                 }
             }
             .navigationTitle("Flipping Dishes")
+        }
+    }
+}
+
+struct MenuItemRow: View {
+    let item: MenuItem
+
+    var body: some View {
+        HStack {
+            if let imageUrlString = item.imageUrl {
+                AsyncImage(url: URL(string: imageUrlString)) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                } placeholder: {
+                    Color.clear
+                }
+                .frame(width: 60, height: 40)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+            }
+            Text(item.name)
+                .font(.headline)
         }
     }
 }
