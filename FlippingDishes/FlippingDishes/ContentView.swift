@@ -31,7 +31,7 @@ struct MenuItemRow: View {
     let item: MenuItem
 
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             if let imageUrlString = item.imageUrl {
                 AsyncImage(url: URL(string: imageUrlString)) { image in
                     image
@@ -43,8 +43,16 @@ struct MenuItemRow: View {
                 .frame(width: 60, height: 40)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
             }
-            Text(item.name)
-                .font(.headline)
+            VStack(alignment: .leading) {
+                Text(item.name)
+                    .font(.headline)
+                if let description = item.description,
+                   !description.isEmpty {
+                    Text(description)
+                        .lineLimit(1)
+                        .font(.caption)
+                }
+            }
         }
     }
 }
