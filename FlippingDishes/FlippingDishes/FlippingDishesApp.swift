@@ -11,7 +11,7 @@ import SwiftUI
 struct FlippingDishesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MenuView(menu: Bundle.main.decode(Menu.self, from: "FlipMenu.json"))
         }
     }
 }

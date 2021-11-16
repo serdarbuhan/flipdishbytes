@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A65431EE27446F71005153FF /* OptionSetItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65431ED27446F71005153FF /* OptionSetItemView.swift */; };
+		A65431F027447034005153FF /* OptionSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65431EF27447034005153FF /* OptionSetsView.swift */; };
+		A65431F227447413005153FF /* MenuItemNameDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65431F127447413005153FF /* MenuItemNameDescriptionView.swift */; };
+		A65431F4274475E7005153FF /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65431F3274475E7005153FF /* MenuItemView.swift */; };
 		A68811E62744319300509410 /* FlippingDishesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68811E52744319300509410 /* FlippingDishesApp.swift */; };
-		A68811E82744319300509410 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68811E72744319300509410 /* ContentView.swift */; };
+		A68811E82744319300509410 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68811E72744319300509410 /* MenuView.swift */; };
 		A68811EA2744319500509410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68811E92744319500509410 /* Assets.xcassets */; };
 		A68811ED2744319500509410 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68811EC2744319500509410 /* Preview Assets.xcassets */; };
+		A68811F42744342900509410 /* FlipMenu.json in Resources */ = {isa = PBXBuildFile; fileRef = A68811F32744342900509410 /* FlipMenu.json */; };
+		A68811F62744347900509410 /* Bundle+JSONDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68811F52744347900509410 /* Bundle+JSONDecoding.swift */; };
+		A68811F9274436CC00509410 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68811F8274436CC00509410 /* DataModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A65431ED27446F71005153FF /* OptionSetItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSetItemView.swift; sourceTree = "<group>"; };
+		A65431EF27447034005153FF /* OptionSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSetsView.swift; sourceTree = "<group>"; };
+		A65431F127447413005153FF /* MenuItemNameDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemNameDescriptionView.swift; sourceTree = "<group>"; };
+		A65431F3274475E7005153FF /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		A68811E22744319300509410 /* FlippingDishes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlippingDishes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68811E52744319300509410 /* FlippingDishesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippingDishesApp.swift; sourceTree = "<group>"; };
-		A68811E72744319300509410 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A68811E72744319300509410 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		A68811E92744319500509410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A68811EC2744319500509410 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A68811F32744342900509410 /* FlipMenu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FlipMenu.json; sourceTree = "<group>"; };
+		A68811F52744347900509410 /* Bundle+JSONDecoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+JSONDecoding.swift"; sourceTree = "<group>"; };
+		A68811F8274436CC00509410 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A65431EC27446F27005153FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A65431ED27446F71005153FF /* OptionSetItemView.swift */,
+				A65431EF27447034005153FF /* OptionSetsView.swift */,
+				A65431F127447413005153FF /* MenuItemNameDescriptionView.swift */,
+				A65431F3274475E7005153FF /* MenuItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A68811D92744319300509410 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +76,12 @@
 		A68811E42744319300509410 /* FlippingDishes */ = {
 			isa = PBXGroup;
 			children = (
+				A65431EC27446F27005153FF /* Views */,
+				A68811F7274436B100509410 /* Models */,
 				A68811E52744319300509410 /* FlippingDishesApp.swift */,
-				A68811E72744319300509410 /* ContentView.swift */,
+				A68811E72744319300509410 /* MenuView.swift */,
+				A68811F52744347900509410 /* Bundle+JSONDecoding.swift */,
+				A68811F32744342900509410 /* FlipMenu.json */,
 				A68811E92744319500509410 /* Assets.xcassets */,
 				A68811EB2744319500509410 /* Preview Content */,
 			);
@@ -65,6 +94,14 @@
 				A68811EC2744319500509410 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A68811F7274436B100509410 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A68811F8274436CC00509410 /* DataModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68811F42744342900509410 /* FlipMenu.json in Resources */,
 				A68811ED2744319500509410 /* Preview Assets.xcassets in Resources */,
 				A68811EA2744319500509410 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A68811E82744319300509410 /* ContentView.swift in Sources */,
+				A65431F4274475E7005153FF /* MenuItemView.swift in Sources */,
+				A65431EE27446F71005153FF /* OptionSetItemView.swift in Sources */,
+				A68811F9274436CC00509410 /* DataModels.swift in Sources */,
+				A68811F62744347900509410 /* Bundle+JSONDecoding.swift in Sources */,
+				A68811E82744319300509410 /* MenuView.swift in Sources */,
+				A65431F227447413005153FF /* MenuItemNameDescriptionView.swift in Sources */,
+				A65431F027447034005153FF /* OptionSetsView.swift in Sources */,
 				A68811E62744319300509410 /* FlippingDishesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +351,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
