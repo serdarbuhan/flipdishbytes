@@ -13,6 +13,7 @@
 		A68811ED2744319500509410 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68811EC2744319500509410 /* Preview Assets.xcassets */; };
 		A68811F42744342900509410 /* FlipMenu.json in Resources */ = {isa = PBXBuildFile; fileRef = A68811F32744342900509410 /* FlipMenu.json */; };
 		A68811F62744347900509410 /* Bundle+JSONDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68811F52744347900509410 /* Bundle+JSONDecoding.swift */; };
+		A68811F9274436CC00509410 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68811F8274436CC00509410 /* DataModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		A68811EC2744319500509410 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A68811F32744342900509410 /* FlipMenu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FlipMenu.json; sourceTree = "<group>"; };
 		A68811F52744347900509410 /* Bundle+JSONDecoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+JSONDecoding.swift"; sourceTree = "<group>"; };
+		A68811F8274436CC00509410 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		A68811E42744319300509410 /* FlippingDishes */ = {
 			isa = PBXGroup;
 			children = (
+				A68811F7274436B100509410 /* Models */,
 				A68811E52744319300509410 /* FlippingDishesApp.swift */,
 				A68811E72744319300509410 /* ContentView.swift */,
 				A68811F52744347900509410 /* Bundle+JSONDecoding.swift */,
@@ -71,6 +74,14 @@
 				A68811EC2744319500509410 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A68811F7274436B100509410 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A68811F8274436CC00509410 /* DataModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68811F9274436CC00509410 /* DataModels.swift in Sources */,
 				A68811F62744347900509410 /* Bundle+JSONDecoding.swift in Sources */,
 				A68811E82744319300509410 /* ContentView.swift in Sources */,
 				A68811E62744319300509410 /* FlippingDishesApp.swift in Sources */,
