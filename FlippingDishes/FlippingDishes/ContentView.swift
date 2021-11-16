@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    let menu = Bundle.main.decode(Menu.self, from: "FlipMenu.json")
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(menu.menuSections) { section in
+                    Section(header: Text(section.name)) {
+                        ForEach(section.menuItems) { menuItem in
+                            Text(menuItem.name)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Flipping Dishes")
+        }
     }
 }
 
