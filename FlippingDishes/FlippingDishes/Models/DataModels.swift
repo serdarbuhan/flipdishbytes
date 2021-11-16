@@ -38,11 +38,13 @@ struct MenuItem: Decodable, Identifiable {
     let name: String
     let description: String?
     let imageUrl: String?
+    let price: Double
 
     enum CodingKeys: String, CodingKey {
         case id = "MenuItemId"
         case name = "Name"
         case description = "Description"
         case imageUrl = "ImageUrl"
+        case price = "ActualPrice"
     }
 }

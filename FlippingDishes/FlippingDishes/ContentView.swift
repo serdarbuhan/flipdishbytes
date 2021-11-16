@@ -43,9 +43,19 @@ struct MenuItemRow: View {
                 .frame(width: 60, height: 40)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
             }
-            VStack(alignment: .leading) {
-                Text(item.name)
-                    .font(.headline)
+            VStack(alignment: .leading, spacing: 6) {
+                HStack {
+                    Text(item.name)
+                        .font(.headline)
+                    Spacer()
+                    Text(item.price, format: .currency(code: "EUR"))
+                        .font(.subheadline)
+                        .bold()
+                        .padding(.horizontal, 5)
+                        .background(Color.orange)
+                        .cornerRadius(20.0)
+                        .foregroundColor(.white)
+                }
                 if let description = item.description,
                    !description.isEmpty {
                     Text(description)
