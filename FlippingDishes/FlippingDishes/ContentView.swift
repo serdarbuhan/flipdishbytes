@@ -28,9 +28,37 @@ struct ContentView: View {
 }
 
 struct MenuItemRow: View {
+
+    @State private var expanded = false
+
     let item: MenuItem
 
     var body: some View {
+        Button {
+            print("\(item.name) tapped!")
+            expanded.toggle()
+        } label: {
+            VStack {
+                itemRowView
+                if (expanded) {
+                    Button {
+                        print("Add \(item.name) to order")
+                    } label: {
+                        Label("Add to order",
+                              systemImage: "cart.fill.badge.plus")
+                            .font(.body)
+                            .padding(5)
+                            .foregroundColor(.orange)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(Color.orange, lineWidth: 2))
+                    }
+                }
+            }
+        }
+    }
+
+    var itemRowView: some View {
         HStack(alignment: .center) {
             if let imageUrlString = item.imageUrl {
                 AsyncImage(url: URL(string: imageUrlString)) { image in
@@ -47,6 +75,7 @@ struct MenuItemRow: View {
                 HStack {
                     Text(item.name)
                         .font(.headline)
+                        .foregroundColor(.black)
                     Spacer()
                     Text(item.price, format: .currency(code: "EUR"))
                         .font(.subheadline)
@@ -59,8 +88,8 @@ struct MenuItemRow: View {
                 if let description = item.description,
                    !description.isEmpty {
                     Text(description)
-                        .lineLimit(1)
                         .font(.caption)
+                        .foregroundColor(.black)
                 }
             }
         }
