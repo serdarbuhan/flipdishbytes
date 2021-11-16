@@ -39,6 +39,7 @@ struct MenuItem: Decodable, Identifiable {
     let description: String?
     let imageUrl: String?
     let price: Double
+    let optionSets: [MenuItemOptionSet]
 
     enum CodingKeys: String, CodingKey {
         case id = "MenuItemId"
@@ -46,5 +47,32 @@ struct MenuItem: Decodable, Identifiable {
         case description = "Description"
         case imageUrl = "ImageUrl"
         case price = "ActualPrice"
+        case optionSets = "MenuItemOptionSets"
+    }
+}
+
+struct MenuItemOptionSet: Decodable, Identifiable {
+    let id: Int
+    let name: String?
+    let isMasterOptionSet: Bool
+    let optionSetItems: [MenuItemOptionSetItem]
+
+    enum CodingKeys: String, CodingKey {
+        case id = "MenuItemOptionSetId"
+        case name = "Name"
+        case isMasterOptionSet = "IsMasterOptionSet"
+        case optionSetItems = "MenuItemOptionSetItems"
+    }
+}
+
+struct MenuItemOptionSetItem: Decodable, Identifiable {
+    let id: Int
+    let name: String
+    let price: Double
+
+    enum CodingKeys: String, CodingKey {
+        case id = "MenuItemOptionSetItemId"
+        case name = "Name"
+        case price = "Price"
     }
 }

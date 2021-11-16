@@ -57,6 +57,7 @@
 		A68811E42744319300509410 /* FlippingDishes */ = {
 			isa = PBXGroup;
 			children = (
+				A68811FA274457CF00509410 /* View */,
 				A68811F7274436B100509410 /* Models */,
 				A68811E52744319300509410 /* FlippingDishesApp.swift */,
 				A68811E72744319300509410 /* ContentView.swift */,
@@ -82,6 +83,13 @@
 				A68811F8274436CC00509410 /* DataModels.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A68811FA274457CF00509410 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

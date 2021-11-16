@@ -38,9 +38,12 @@ struct MenuItemRow: View {
             print("\(item.name) tapped!")
             expanded.toggle()
         } label: {
-            VStack {
+            VStack(spacing: 10) {
                 itemRowView
-                if (expanded) {
+                if expanded, item.optionSets.count > 0 {
+                    optionSetView
+                }
+                if expanded {
                     Button {
                         print("Add \(item.name) to order")
                     } label: {
@@ -93,6 +96,52 @@ struct MenuItemRow: View {
                 }
             }
         }
+    }
+
+    var optionSetView: some View {
+        HStack {
+            Spacer(minLength: 0)
+            VStack(alignment: .center) {
+                ForEach(item.optionSets) { optionSet in
+                    VStack(alignment: .leading) {
+                        if let optionSetName = optionSet.name {
+                            Text(optionSetName)
+                                .font(.callout)
+                                .bold()
+                                .foregroundColor(.black)
+                        }
+                        HStack {
+                            ForEach(optionSet.optionSetItems) { item in
+                                OptionSetItemView(item: item)
+                            }
+                        }
+                    }
+
+                }
+            }
+            Spacer(minLength: 0)
+        }
+        .padding()
+        .background(Color.orange.opacity(0.4))
+        .cornerRadius(20.0)
+    }
+}
+
+struct OptionSetItemView: View {
+    let item: MenuItemOptionSetItem
+
+    var body: some View {
+        VStack {
+            Text(item.name)
+                .font(.caption)
+                .bold()
+            Text(item.price, format: .currency(code: "EUR"))
+                .font(.caption2)
+        }
+        .padding(5)
+        .background(Color.white)
+        .foregroundColor(.black)
+        .cornerRadius(10.0)
     }
 }
 
